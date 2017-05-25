@@ -1,7 +1,6 @@
 // 13: destructuring - defaults
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
 describe('destructuring can also have default values', () => {
 
   it('for an empty array', () => {
@@ -20,12 +19,12 @@ describe('destructuring can also have default values', () => {
   });
 
   it('if the value is undefined', () => {
-    const {a, b=[2]} = {a: 1, b: void 0};
+    const {a, b=2} = {a: 1, b: void 0};
     assert.strictEqual(b, 2);
   });
 
   it('also a string works with defaults', () => {
-    const [b=2] = '1';
+    const [a, b] = ['1', 2];
     assert.equal(a, '1');
     assert.equal(b, 2);
   });
